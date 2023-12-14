@@ -23,7 +23,12 @@
 
     # always loaded
     'data': [
+        "views/assets.xml",
         'views/project.xml',
+        "views/hr_attendance.xml",
+    ],
+    "qweb": [
+        "static/src/xml/recap_task.xml",
     ],
 
 }

@@ -1,0 +1,10 @@
+.o_hr_attendance_kiosk_mode .o_form_recap_task {
+    cursor: pointer;
+    margin: 0.1em 0 0.1em;
+    padding: 0.15em 0.3em;
+    border-radius: 0.1em;
+}
+
+.o_hr_attendance_kiosk_mode .o_form_recap_task:hover {
+    color: #00A09D;
+}

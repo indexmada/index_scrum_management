@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2016 Siddharth Bhalgami <siddharth.bhalgami@gmail.com>
+     Copyright 2019-Today: Druidoo (<https://www.druidoo.io>)
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<template id="template" xml:space="preserve">
+    <t t-extend="HrAttendanceMyMainMenu">
+        <t t-jquery=".o_hr_attendance_sign_in_out_icon.fa-sign-out" t-operation="replace">
+
+            <a class="fa fa-7x o_form_recap_task fa-sign-out btn-warning" t-if="checked_in" aria-label="Sign out" title="Sign out"/>
+        </t>
+    </t>
+
+</template>

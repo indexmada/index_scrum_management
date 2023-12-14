@@ -1,0 +1,32 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="recap_form">
+      <field name="name">RecapForm</field>
+      <field name="model">hr.attendance</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="employee_id" readonly="1"/>
+            <field name="recap"/>
+          </group>
+          <footer>
+                <button name="save_recap_task" type="object" string="Sauvegarder" class="btn-primary save_recap_task"/>
+                <button string="Annuler" special="cancel"/>
+          </footer>
+        </form>
+      </field>
+    </record>
+
+    <!-- Add field Recap on attendance view list -->
+    <record id="view_attendance_tree_inherit" model="ir.ui.view">
+      <field name="name">AttendanceViewListFieldREcap</field>
+      <field name="model">hr.attendance</field>
+      <field name="inherit_id" ref="hr_attendance.view_attendance_tree"/>
+      <field name="arch" type="xml">
+        <field name="worked_hours" position="after">
+          <field name="recap"/>
+        </field>
+      </field>
+    </record>
+  </data>
+</odoo>
