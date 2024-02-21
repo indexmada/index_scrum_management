@@ -24,4 +24,4 @@ class ResUsers(models.Model):
 
 	def compute_project_ids(self):
 		for rec in self:
-			rec.project_ids = self.env['project.project'].sudo().search([]).filtered(lambda x: rec.id in x.to_user_ids.ids)
+			rec.project_ids = self.env['project.project'].sudo().search([]).filtered(lambda x: rec.id in x.to_user_ids.ids or rec.id == x.user_id.id or rec.id in x.partner_id.user_ids.ids)
